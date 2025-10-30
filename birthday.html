@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Automatic music playback on page load -->
+    <audio autoplay loop>
+        <source src="Happy Birthday song.mp3" type="audio/wav">
+        <!-- Replace with your own audio file, e.g., src="birthday-song.mp3" for a full song -->
+        Your browser does not support the audio element.
+    </audio>
+
     <!-- Side decorations (balloons and paper) -->
     <div class="side-decorations">
         <div class="balloon-side animate__animated animate__fadeInLeft"></div>
@@ -34,10 +41,9 @@
     </div>
 
     <div class="scroll-section">
-        <p id="personalMessage" class="hidden">Dear <span id="userName2"></span>, on your special day, I wish you joy, laughter, and all the happiness in the world. May your year ahead be filled with adventures and dreams come true!</p>
-        <p id="personalMessage" class="hidden">Hi <span id="userName2"></span>,First of all sorry for late gift actually it's not a big gift but i hope you accept this !!!!!!!!!!!!!!</p>
-        <p id="personalMessage" class="hidden">Dhanya <span id="userName2"></span>, It's been like 6 months since i knew you,i don't know much to say but it's been really a good six months<b></b>
-             And i hopes it goes long as possible ,lot of fights but still lof of fun and im sure we will meet one day.Looking forward for that </p>
+        <p id="personalMessage1" class="hidden">Dear <span id="userName2-1"></span>, on your special day, I wish you joy, laughter, and all the happiness in the world. May your year ahead be filled with adventures and dreams come true!</p>
+        <p id="personalMessage2" class="hidden">Hi <span id="userName2-2"></span>, First of all sorry for late gift actually it's not a big gift but i hope you accept this !!!!!!!!!!!!!!</p>
+        <p id="personalMessage3" class="hidden">Dhanya <span id="userName2-3"></span>, It's been like 6 months since i knew you, i don't know much to say but it's been really a good six months. And i hope it goes long as possible, lot of fights but still lot of fun and im sure we will meet one day. Looking forward for that</p>
         <div class="gifts">
             <div class="gift animate__animated animate__fadeInUp hidden" data-delay="0">🎁</div>
             <div class="gift animate__animated animate__fadeInUp hidden" data-delay="200">🎂</div>
@@ -50,7 +56,9 @@
         const urlParams = new URLSearchParams(window.location.search);
         const name = urlParams.get('name') || 'Friend';
         document.getElementById('userName').textContent = name;
-        document.getElementById('userName2').textContent = name;
+        document.getElementById('userName2-1').textContent = name;
+        document.getElementById('userName2-2').textContent = name;
+        document.getElementById('userName2-3').textContent = name;
 
         // Modal functions
         function openModal() {
